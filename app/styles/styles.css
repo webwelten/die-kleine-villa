@@ -1,0 +1,583 @@
+.prices th small {
+  color: #8a8a8a;
+}
+
+.hide {
+  display: none;
+}
+
+input[type="text"][readonly],
+input[type="text"]:read-only {}
+
+.button.success,
+.button.success:hover {
+  color: white;
+}
+
+.flatpickr-month {
+  height: 32px !important;
+}
+
+.mapBox {
+  position: relative;
+  height: 300px;
+}
+
+.map,
+.mapBox--mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffc;
+}
+
+.mapBox--mask:active,
+.map:hover+.mapBox--mask {
+  visibility: hidden;
+}
+
+.mapBox--mask {
+
+  &:active,
+  .map:hover+& {
+    visibility: hidden;
+  }
+}
+
+.mapBox~p {
+  font: normal 1em/1.6 "Redacted Script Bold";
+  color: #aaa;
+}
+
+.mapBox--mask {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-size: 10vmin;
+  font-weight: 900;
+  font-family: sans-serif;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.event {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 150px;
+  bottom: 3px;
+  left: calc(50% - 1.5px);
+  content: " ";
+  display: block;
+  background: #3d8eb9;
+}
+
+.event.busy {
+  background: #f64747;
+}
+
+.flatpickr-calendar.inline {
+  margin-bottom: 20px !important;
+}
+
+.help-text {
+  word-spacing: .6px;
+}
+
+.sticky.is-stuck {
+  z-index: 1000;
+}
+
+label {
+  font-weight: 600;
+  color: #444;
+}
+
+.flatpickr-day.disabled {
+  color: rgba(160, 28, 28, .6) !important;
+}
+
+.no-js .header-bar {
+  display: none;
+}
+
+@media screen and (min-width: 64em) {
+  .no-js .header-bar {
+    display: block;
+  }
+
+  .no-js .title-bars {
+    display: none;
+  }
+}
+
+.dropdown.menu .is-active>a {
+  color: white !important;
+}
+
+.dropdown.menu>li.is-dropdown-submenu-parent>a:after {
+  border-top-color: white;
+}
+
+/*****************************************************************************
+    #BASE
+******************************************************************************/
+
+html,
+body {
+  height: 100%;
+}
+
+h5 {
+  margin-bottom: .5rem;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  background-color: #A01C1C;
+  padding-bottom: 20px;
+}
+
+.legal a {
+  color: white;
+}
+
+.legal a:hover {
+  text-decoration: underline;
+}
+
+#destroyed {
+  background-color: #A01C1C;
+  padding: 20px;
+}
+
+.img-responsive {
+  border: 1.5px solid rgba(130, 112, 70, .7);
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 767px) {
+  .img-responsive {
+    margin-bottom: 1rem;
+  }
+}
+
+/*****************************************************************************
+    #TOP-BAR
+******************************************************************************/
+
+.sticky-container {
+  height: 50px;
+  transition: height .4s;
+}
+
+@media only screen and (min-width: 64em) {
+  .sticky-container {
+    height: 65.5938px;
+  }
+}
+
+.title-bars {
+  background-color: #611616;
+  padding: .5rem;
+}
+
+.header-bar {
+  padding: .8rem .8rem;
+}
+
+.top-bar,
+.top-bar ul,
+.header-bar {
+  background-color: #611616;
+}
+
+.button.alert {
+  background-color: #A01C1C !important;
+}
+
+.button.alert:focus,
+.button.alert:hover {
+  background-color: #611616 !important;
+}
+
+.button.secondary {
+  background-color: #e9e9e9;
+  color: #000;
+}
+
+.button.secondary:focus,
+.button.secondary:hover {
+  background-color: #bababa;
+  color: #000;
+}
+
+.title-bars a,
+.top-bar a,
+.dropdown.menu .is-dropdown-submenu-parent.is-down-arrow>a::after,
+.header-bar a {
+  color: #EEEEEE;
+  border-top-color: #EEEEEE !important;
+}
+
+.is-submenu-item>a {
+  color: #601616 !important;
+}
+
+.menu>li>a>span {
+  vertical-align: baseline;
+}
+
+#header button {
+  margin-bottom: 0 !important;
+}
+
+.menu-text-title {
+  position: absolute;
+
+  margin-top: -12px;
+  width: 175px;
+  padding: 4px 0;
+
+  text-align: center;
+  background-color: #FCEED9;
+  border-radius: 4px;
+
+  transition: width .4s;
+}
+
+.menu-text-title .title {
+  display: block;
+  overflow: hidden;
+  max-height: 1000px;
+  transition: max-height .4s, opacity .2s;
+}
+
+.menu-text-title img {
+  height: 4rem;
+  transition: all .4s;
+}
+
+.menu-text-title a {
+  color: rgb(97, 22, 22) !important;
+}
+
+.title-bar,
+.top-bar {
+  padding: .8rem .5rem !important;
+}
+
+@media only screen and (min-width: 64em) {
+  .menu-text-title {
+    padding: 6px 0;
+  }
+
+  ul.dropdown.menu {
+    margin-left: 180px !important;
+  }
+}
+
+.sticky:not(.is-stuck) {
+  z-index: 1 !important;
+}
+
+.sticky.is-stuck .menu-text-title {
+  width: 70px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.sticky #action {
+  margin-left: 45%;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.sticky.is-stuck #action {
+  opacity: 1;
+}
+
+.sticky.is-stuck .menu-text-title img {
+  height: 2.8rem;
+  width: 2.8rem;
+  vertical-align: bottom;
+}
+
+.sticky.is-stuck .menu-text-title .title {
+  max-height: 0;
+  opacity: 0;
+
+}
+
+/*****************************************************************************
+    #TYPO
+******************************************************************************/
+
+.page-heading {
+  margin: 0;
+  font: 2.6rem/.8 'Dancing Script', cursive;
+  letter-spacing: 0;
+  color: #611616;
+}
+
+.small-outer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.small-outer-top {
+  margin-top: 2rem;
+}
+
+.large-outer {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.page-teaser {
+  display: block;
+  margin-bottom: 3rem;
+  font: 1.8rem 'Dancing Script', cursive;
+  letter-spacing: 0;
+  color: #a3895c;
+}
+
+h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  letter-spacing: 0;
+}
+
+p {
+  font: 300 1.10rem/1.5 'Open Sans', sans-serif;
+  letter-spacing: -.2px;
+  word-spacing: -2px;
+  color: #232323;
+}
+
+.sign {
+  margin-bottom: 2rem;
+  font: 1.8rem 'Dancing Script', cursive;
+  letter-spacing: 0;
+  color: #232323;
+}
+
+@media (min-width: 640px) {
+  h2.page-heading {
+    font-size: 5rem;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+}
+
+/*****************************************************************************
+    #HERO
+******************************************************************************/
+
+#header {
+  margin-top: 1px;
+}
+
+.hero {
+  margin: 20px 0 0;
+  position: relative;
+  height: 78%;
+
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)),
+    url("../images/rooms/haus.jpg") no-repeat;
+  background-position: 0 0, 50% 0;
+  background-size: contain, cover;
+  background-attachment: local;
+}
+
+@media only screen and (orientation: portrait) {
+  .hero {
+    margin-top: 20px;
+    height: 85%;
+    background-size: contain, cover;
+    background-position: 0 0, 0 0;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .hero {
+    background:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)),
+      url("../images/rooms/haus-large.jpg") no-repeat;
+    background-position: 0 0, 50% 0;
+    background-size: contain, cover;
+    background-attachment: local;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1200px) {
+  .hero {
+    background-position: 0 0, 50% -80px;
+  }
+}
+
+.intro-container {
+  position: absolute;
+  bottom: 1%;
+  width: 100%;
+  text-align: center;
+}
+
+/*****************************************************************************
+    #
+******************************************************************************/
+
+.home-link {
+  font: 400 1.8rem 'Dancing Script', cursive;
+}
+
+.intro-title {
+  margin: 0 0 4rem;
+  font: 4rem/1.1 'Dancing Script', cursive;
+  color: #611616;
+}
+
+@media only screen and (min-width: 480px) {
+  .intro-title {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .home-link {
+    font-size: 2.5rem;
+  }
+
+  .intro-title {
+    font-size: 5rem;
+  }
+}
+
+/*****************************************************************************
+    #SECTIONS
+******************************************************************************/
+
+section {
+  padding: 20px 0;
+  background-color: #FDF6E9;
+}
+
+@media (min-width: 640px) {
+  section {
+    padding: 60px 0;
+  }
+}
+
+.highlight {
+  background-color: #FCEED9;
+}
+
+.secondary {
+  background-color: rgba(245, 245, 245, 0.53);
+}
+
+/*****************************************************************************
+    #BREAKS WITH IMAGES
+******************************************************************************/
+
+.break-water {
+  min-height: 40%;
+
+  background-image: url("../images/schlei.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+
+  color: #AAA;
+}
+
+.break-sun {
+  min-height: 50%;
+
+  background: url("../images/sonne.jpg") no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+
+  color: #AAA;
+}
+
+
+@media only screen and (orientation: landscape) {
+
+  .break-water {
+    background-position: 0 -170px;
+  }
+
+  .break-entry {
+    background-position: 0 -480px;
+  }
+
+  .break-sun {
+    min-height: 70%;
+    background-position: 0 -50px;
+  }
+
+}
+
+/*****************************************************************************
+    #CONTACT
+******************************************************************************/
+
+.contact-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.contact-list li {
+  margin-left: 0;
+}
+
+/*****************************************************************************
+    #BOOKING-STEP
+    background-color: rgba(210, 233, 250, .3)
+    714731
+******************************************************************************/
+
+
+.booking-step {
+  /*background-color: white;*/
+}
+
+.booking-step .columns {
+  background-color: white;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  padding-top: .5rem;
+}
+
+#general {
+  border: 1px solid rgba(160, 28, 28, 0.415);
+}
+
+.booking-step-image {
+  height: 2.4rem;
+  vertical-align: text-bottom;
+}
+
+.booking-result-image {
+  height: 1rem;
+  vertical-align: baseline;
+  opacity: .5;
+}
+
+/*****************************************************************************
+    #PICKER
+******************************************************************************/
