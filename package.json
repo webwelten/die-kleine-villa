@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "dev": "parcel ./app/index.html",
-    "build": "parcel build ./app/index.html"
+    "build": "parcel build ./app/index.html --global require"
   },
   "eslintConfig": {
     "extends": "google"
