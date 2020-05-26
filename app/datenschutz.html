@@ -3,309 +3,443 @@
   $token = md5(rand(22,9999));
   $_SESSION['token'] = $token;
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Die kleine Villa in Zimmert &ndash;Urlaub im Ferienhaus zwischen Schlei und Ostsee">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kleine Villa Zimmert &ndash; Ferienhaus zwischen Schlei und Ostsee</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Die kleine Villa in Zimmert &ndash;Urlaub im Ferienhaus zwischen Schlei und Ostsee"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Kleine Villa Zimmert &ndash; Ferienhaus zwischen Schlei und Ostsee
+    </title>
 
     <!-- Disable tap highlight on IE -->
-    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="msapplication-tap-highlight" content="no" />
 
     <!-- Color the status bar on mobile devices -->
-    <meta name="theme-color" content="#2F3BA2">
+    <meta name="theme-color" content="#2F3BA2" />
 
-    <meta name="google-site-verification" content="dQ1SPsCrQqz2AQM868D_ge6s4l4UdIqCAuFU5j1aEy8" />
+    <meta
+      name="google-site-verification"
+      content="dQ1SPsCrQqz2AQM868D_ge6s4l4UdIqCAuFU5j1aEy8"
+    />
 
     <!-- build:css(app/) styles/main.min.css -->
-    <link href="styles/foundation.min.css" rel="stylesheet" type="text/css"/>
-    <link href="styles/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/foundation.min.css" rel="stylesheet" type="text/css" />
+    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
     <!-- endbuild -->
 
     <script type="text/javascript">
       var occ = [
-        ['22.07.2015', '28.07.2015'],
-        ['13.08.2015', '27.08.2015'],
-        ['03.12.2015', '11.12.2015'],
-        ['27.12.2015', '29.12.2015'],
+        ["22.07.2015", "28.07.2015"],
+        ["13.08.2015", "27.08.2015"],
+        ["03.12.2015", "11.12.2015"],
+        ["27.12.2015", "29.12.2015"],
 
-        ['01.01.2016', '08.01.2016'],
-        ['13.02.2016', '18.02.2016'],
-        ['19.03.2016', '27.03.2016'],
-        ['28.03.2016', '31.03.2016'],
-        ['09.04.2016', '17.04.2016'],
-        ['01.05.2016', '11.05.2016'],
-        ['23.05.2016', '05.06.2016'],
+        ["01.01.2016", "08.01.2016"],
+        ["13.02.2016", "18.02.2016"],
+        ["19.03.2016", "27.03.2016"],
+        ["28.03.2016", "31.03.2016"],
+        ["09.04.2016", "17.04.2016"],
+        ["01.05.2016", "11.05.2016"],
+        ["23.05.2016", "05.06.2016"],
 
-        ['10.06.2016', '13.06.2016'],
-        ['19.06.2016', '26.06.2016'],
+        ["10.06.2016", "13.06.2016"],
+        ["19.06.2016", "26.06.2016"],
 
-        ['02.07.2016', '27.08.2016'],
-        ['31.08.2016', '03.09.2016'],
+        ["02.07.2016", "27.08.2016"],
+        ["31.08.2016", "03.09.2016"],
 
-        ['06.09.2016', '15.09.2016'],
-        ['16.09.2016', '23.10.2016'],
-        ['12.11.2016', '26.11.2016'],
+        ["06.09.2016", "15.09.2016"],
+        ["16.09.2016", "23.10.2016"],
+        ["12.11.2016", "26.11.2016"],
 
-        ['28.12.2016', '02.01.2017'],
-        ['09.07.2017', '23.07.2017'],
+        ["28.12.2016", "02.01.2017"],
+        ["09.07.2017", "23.07.2017"],
       ];
     </script>
-
   </head>
   <body>
-
-  <div id="header">
-    <nav class="sticky-container" data-sticky-container>
-      <div class="sticky" data-sticky data-top-anchor="header:top"
-           data-btm-anchor="destroyed:bottom" data-sticky-on="small"
-           data-margin-top="0" data-margin-bottom="0" style="width: 100%!important;">
-
-        <div class="title-bars" data-responsive-toggle="full-menu" data-hide-for="large">
-          <div class="row align-middle">
-
-            <div class="columns small-10 medium-11">
-              <div class="menu-text-title">
-                <a class="home-link" href="#header" tabindex="0">
-                  <img src="images/icons/home.svg">
-                  <span class="title">Die&nbsp;kleine<br>Villa</span>
-                </a>
+    <div id="header">
+      <nav class="sticky-container" data-sticky-container>
+        <div
+          class="sticky"
+          data-sticky
+          data-top-anchor="header:top"
+          data-btm-anchor="destroyed:bottom"
+          data-sticky-on="small"
+          data-margin-top="0"
+          data-margin-bottom="0"
+          style="width: 100% !important;"
+        >
+          <div
+            class="title-bars"
+            data-responsive-toggle="full-menu"
+            data-hide-for="large"
+          >
+            <div class="row align-middle">
+              <div class="columns small-10 medium-11">
+                <div class="menu-text-title">
+                  <a class="home-link" href="#header" tabindex="0">
+                    <img src="images/icons/home.svg" />
+                    <span class="title">Die&nbsp;kleine<br />Villa</span>
+                  </a>
+                </div>
+                <button
+                  id="action"
+                  class="button small secondary is-booking-trigger"
+                >
+                  Ferienhaus anfragen
+                </button>
               </div>
-              <button id="action" class="button small secondary is-booking-trigger">
-                Ferienhaus anfragen
-              </button>
-            </div>
 
-            <div class="columns small-2 medium-1 text-center">
-              <button id="menu-toggle" class="menu-icon" type="button" data-toggle></button>
+              <div class="columns small-2 medium-1 text-center">
+                <button
+                  id="menu-toggle"
+                  class="menu-icon"
+                  type="button"
+                  data-toggle
+                ></button>
+              </div>
+            </div>
+          </div>
+
+          <div id="full-menu" class="header-bar">
+            <div class="row align-middle">
+              <div class="columns medium-9">
+                <div
+                  class="menu-text-title hide-for-small-only hide-for-medium-only"
+                >
+                  <a class="home-link" href="#header" tabindex="0">
+                    <img src="images/icons/home.svg" />
+                    <span class="title">Die&nbsp;kleine Villa</span>
+                  </a>
+                </div>
+
+                <ul class="dropdown menu" data-dropdown-menu>
+                  <li class="has-submenu">
+                    <a href="#">Zimmer</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                      <li><a href="#wohnzimmer">Wohnzimmer</a></li>
+                      <li><a href="#kueche">Küche</a></li>
+                      <li><a href="#schlafzimmer">Schlafzimmer</a></li>
+                      <li><a href="#bad">Bad</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#garten"
+                      ><span class="hide-for-small-only">Unser</span> Garten</a
+                    >
+                  </li>
+                  <!--<li><a href="#ausstattung">Ausstattung</a></li>-->
+                  <li><a href="#lage">Lage</a></li>
+                </ul>
+              </div>
+
+              <div class="columns medium-3">
+                <button
+                  class="button secondary hide-for-small-only hide-for-medium-only is-booking-trigger"
+                >
+                  Ferienhaus anfragen
+                </button>
+              </div>
             </div>
           </div>
         </div>
-
-        <div id="full-menu" class="header-bar">
-          <div class="row align-middle">
-
-            <div class="columns medium-9">
-              <div class="menu-text-title hide-for-small-only hide-for-medium-only">
-                <a class="home-link" href="#header" tabindex="0">
-                  <img src="images/icons/home.svg">
-                  <span class="title">Die&nbsp;kleine Villa</span>
-                </a>
-              </div>
-
-              <ul class="dropdown menu" data-dropdown-menu>
-                <li class="has-submenu">
-                  <a href="#">Zimmer</a>
-                  <ul class="submenu menu vertical" data-submenu>
-                    <li><a href="#wohnzimmer">Wohnzimmer</a></li>
-                    <li><a href="#kueche">Küche</a></li>
-                    <li><a href="#schlafzimmer">Schlafzimmer</a></li>
-                    <li><a href="#bad">Bad</a></li>
-                  </ul>
-                </li>
-                <li><a href="#garten"><span class="hide-for-small-only">Unser</span> Garten</a></li>
-                <!--<li><a href="#ausstattung">Ausstattung</a></li>-->
-                <li><a href="#lage">Lage</a></li>
-              </ul>
-            </div>
-
-            <div class="columns medium-3">
-              <button class="button secondary hide-for-small-only hide-for-medium-only is-booking-trigger">
-                Ferienhaus anfragen
-              </button>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </nav>
-  </div>
-
-  <section id="hero" class="hero">
-    <div class="intro-container">
-      <button id="request-booking" class="large button alert is-booking-trigger">
-        Ferienhaus anfragen
-      </button>
+      </nav>
     </div>
-  </section>
 
-  <section id="impressum">
-    <div class="row align-center">
-      <div class="columns">
+    <section id="hero" class="hero">
+      <div class="intro-container">
+        <button
+          id="request-booking"
+          class="large button alert is-booking-trigger"
+        >
+          Ferienhaus anfragen
+        </button>
+      </div>
+    </section>
 
-        <h2 class="page-heading text-center large-outer">Impressum</h2>
+    <section id="impressum">
+      <div class="row align-center">
+        <div class="columns">
+          <h2 class="page-heading text-center large-outer">Impressum</h2>
 
-        <p><strong>Angaben gemäß § 5 TMG:</strong></p>
-        <p>Gisela Magdalena Richter<br />
-          Dörpstraat, 1a<br />
-          24354 Zimmert
-        </p>
+          <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+          <p>
+            Gisela Magdalena Richter<br />
+            Dörpstraat, 1a<br />
+            24354 Zimmert
+          </p>
 
-        <dl>
-          <dt>Telefon:</dt>
-          <dl>+49 4355 1359</dl>
-
-          <dt>E-Mail:</dt>
           <dl>
-            <a href="mailto:&#100;&#105;&#101;&#107;&#108;&#101;&#105;&#110;&#101;&#118;&#105;&#108;&#108;&#097;&#064;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#046;&#099;&#111;&#109;">&#100;&#105;&#101;&#107;&#108;&#101;&#105;&#110;&#101;&#118;&#105;&#108;&#108;&#097;&#064;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#046;&#099;&#111;&#109;</a>
+            <dt>Telefon:</dt>
+            <dl>+49 4355 1359</dl>
+
+            <dt>E-Mail:</dt>
+            <dl>
+              <a
+                href="mailto:&#100;&#105;&#101;&#107;&#108;&#101;&#105;&#110;&#101;&#118;&#105;&#108;&#108;&#097;&#064;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#046;&#099;&#111;&#109;"
+                >&#100;&#105;&#101;&#107;&#108;&#101;&#105;&#110;&#101;&#118;&#105;&#108;&#108;&#097;&#064;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#046;&#099;&#111;&#109;</a
+              >
+            </dl>
           </dl>
-        </dl>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="datenschutz">
-    <div class="row align-center">
-      <div class="columns">
+    <section id="datenschutz">
+      <div class="row align-center">
+        <div class="columns">
+          <h2 class="page-heading text-center large-outer">
+            Datenschutzerklärung
+          </h2>
 
-        <h2 class="page-heading text-center large-outer">Datenschutzerklärung</h2>
+          <p>
+            <strong><big>Datenschutzerklärung</big></strong>
+          </p>
 
-        <p><strong><big>Datenschutzerklärung</big></strong></p>
+          <p><strong>Allgemeiner Hinweis und Pflichtinformationen</strong></p>
+          <p><strong>Benennung der verantwortlichen Stelle</strong></p>
+          <p>
+            Die verantwortliche Stelle für die Datenverarbeitung auf dieser
+            Website ist:
+          </p>
+          <p>
+            Gisela Richter<br />
+            Dörpstraat 1a<br />
+            24354 &nbsp;Zimmert
+          </p>
+          <p>
+            Die verantwortliche Stelle entscheidet allein oder gemeinsam mit
+            anderen über die Zwecke und Mittel der Verarbeitung von
+            personenbezogenen Daten (z.B. Namen, Kontaktdaten o. Ä.).
+          </p>
 
-        <p><strong>Allgemeiner Hinweis und Pflichtinformationen</strong></p>
-        <p><strong>Benennung der verantwortlichen Stelle</strong></p>
-        <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-        <p>
-          Gisela Richter<br>
-          Dörpstraat 1a<br>
-          24354 &nbsp;Zimmert
-        </p>
-        <p>Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o. Ä.).</p>
-        
-        <p><strong>Widerruf Ihrer Einwilligung zur Datenverarbeitung</strong></p>
-        <p>Nur mit Ihrer ausdrücklichen Einwilligung sind einige Vorgänge der Datenverarbeitung möglich. Ein Widerruf Ihrer bereits erteilten Einwilligung ist jederzeit möglich. Für den Widerruf genügt eine formlose Mitteilung per E-Mail. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
-        
-        <p><strong>Recht auf Beschwerde bei der zuständigen Aufsichtsbehörde</strong></p>
-        <p>Als Betroffener steht Ihnen im Falle eines datenschutzrechtlichen Verstoßes ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Zuständige Aufsichtsbehörde bezüglich datenschutzrechtlicher Fragen ist der Landesdatenschutzbeauftragte des Bundeslandes, in dem sich der Sitz unseres Unternehmens befindet. Der folgende Link stellt eine Liste der Datenschutzbeauftragten sowie deren Kontaktdaten bereit: <a href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html" target="_blank">https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html</a>.</p>
-        
-        <p><strong>Recht auf Datenübertragbarkeit</strong></p>
-        <p>Ihnen steht das Recht zu, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an Dritte aushändigen zu lassen. Die Bereitstellung erfolgt in einem maschinenlesbaren Format. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.</p>
-        
-        <p><strong>Recht auf Auskunft, Berichtigung, Sperrung, Löschung</strong></p>
-        <p>Sie haben jederzeit im Rahmen der geltenden gesetzlichen Bestimmungen das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, Herkunft der Daten, deren Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Diesbezüglich und auch zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit über die im Impressum aufgeführten Kontaktmöglichkeiten an uns wenden.</p>
-        
-        <p><strong>SSL- bzw. TLS-Verschlüsselung</strong></p>
-        <p>Aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, die Sie an uns als Seitenbetreiber senden, nutzt unsere Website eine SSL-bzw. TLS-Verschlüsselung. Damit sind Daten, die Sie über diese Website übermitteln, für Dritte nicht mitlesbar. Sie erkennen eine verschlüsselte Verbindung an der „https://“ Adresszeile Ihres Browsers und am Schloss-Symbol in der Browserzeile.</p>
-        
-        <p><strong>Buchung auf dieser Website</strong></p>
-        <p>Zur Nutzung bestimmter Funktionen können Sie sich auf unserer Website registrieren. Die übermittelten Daten dienen ausschließlich zum Zwecke der Nutzung des jeweiligen Angebotes oder Dienstes. Bei der Registrierung abgefragte Pflichtangaben sind vollständig anzugeben. Andernfalls werden wir die Registrierung ablehnen.</p>
-        <p>Im Falle wichtiger Änderungen, etwa aus technischen Gründen, informieren wir Sie per E-Mail. Die E-Mail wird an die Adresse versendet, die bei der Registrierung angegeben wurde.</p>
-        <p>Die Verarbeitung der bei der Registrierung eingegebenen Daten erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Ein Widerruf Ihrer bereits erteilten Einwilligung ist jederzeit möglich. Für den Widerruf genügt eine formlose Mitteilung per E-Mail. Die Rechtmäßigkeit der bereits erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
-        <!--<p>Wir speichern die bei der Registrierung erfassten Daten während des Zeitraums, den Sie auf unserer Website registriert sind. Ihren Daten werden gelöscht, sollten Sie Ihre Registrierung aufheben. Gesetzliche Aufbewahrungsfristen bleiben unberührt.</p>-->
+          <p>
+            <strong>Widerruf Ihrer Einwilligung zur Datenverarbeitung</strong>
+          </p>
+          <p>
+            Nur mit Ihrer ausdrücklichen Einwilligung sind einige Vorgänge der
+            Datenverarbeitung möglich. Ein Widerruf Ihrer bereits erteilten
+            Einwilligung ist jederzeit möglich. Für den Widerruf genügt eine
+            formlose Mitteilung per E-Mail. Die Rechtmäßigkeit der bis zum
+            Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
+          </p>
+
+          <p>
+            <strong
+              >Recht auf Beschwerde bei der zuständigen Aufsichtsbehörde</strong
+            >
+          </p>
+          <p>
+            Als Betroffener steht Ihnen im Falle eines datenschutzrechtlichen
+            Verstoßes ein Beschwerderecht bei der zuständigen Aufsichtsbehörde
+            zu. Zuständige Aufsichtsbehörde bezüglich datenschutzrechtlicher
+            Fragen ist der Landesdatenschutzbeauftragte des Bundeslandes, in dem
+            sich der Sitz unseres Unternehmens befindet. Der folgende Link
+            stellt eine Liste der Datenschutzbeauftragten sowie deren
+            Kontaktdaten bereit:
+            <a
+              href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html"
+              target="_blank"
+              >https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html</a
+            >.
+          </p>
+
+          <p><strong>Recht auf Datenübertragbarkeit</strong></p>
+          <p>
+            Ihnen steht das Recht zu, Daten, die wir auf Grundlage Ihrer
+            Einwilligung oder in Erfüllung eines Vertrags automatisiert
+            verarbeiten, an sich oder an Dritte aushändigen zu lassen. Die
+            Bereitstellung erfolgt in einem maschinenlesbaren Format. Sofern Sie
+            die direkte Übertragung der Daten an einen anderen Verantwortlichen
+            verlangen, erfolgt dies nur, soweit es technisch machbar ist.
+          </p>
+
+          <p>
+            <strong
+              >Recht auf Auskunft, Berichtigung, Sperrung, Löschung</strong
+            >
+          </p>
+          <p>
+            Sie haben jederzeit im Rahmen der geltenden gesetzlichen
+            Bestimmungen das Recht auf unentgeltliche Auskunft über Ihre
+            gespeicherten personenbezogenen Daten, Herkunft der Daten, deren
+            Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf
+            Berichtigung, Sperrung oder Löschung dieser Daten. Diesbezüglich und
+            auch zu weiteren Fragen zum Thema personenbezogene Daten können Sie
+            sich jederzeit über die im Impressum aufgeführten
+            Kontaktmöglichkeiten an uns wenden.
+          </p>
+
+          <p><strong>SSL- bzw. TLS-Verschlüsselung</strong></p>
+          <p>
+            Aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher
+            Inhalte, die Sie an uns als Seitenbetreiber senden, nutzt unsere
+            Website eine SSL-bzw. TLS-Verschlüsselung. Damit sind Daten, die Sie
+            über diese Website übermitteln, für Dritte nicht mitlesbar. Sie
+            erkennen eine verschlüsselte Verbindung an der „https://“
+            Adresszeile Ihres Browsers und am Schloss-Symbol in der
+            Browserzeile.
+          </p>
+
+          <p><strong>Buchung auf dieser Website</strong></p>
+          <p>
+            Zur Nutzung bestimmter Funktionen können Sie sich auf unserer
+            Website registrieren. Die übermittelten Daten dienen ausschließlich
+            zum Zwecke der Nutzung des jeweiligen Angebotes oder Dienstes. Bei
+            der Registrierung abgefragte Pflichtangaben sind vollständig
+            anzugeben. Andernfalls werden wir die Registrierung ablehnen.
+          </p>
+          <p>
+            Im Falle wichtiger Änderungen, etwa aus technischen Gründen,
+            informieren wir Sie per E-Mail. Die E-Mail wird an die Adresse
+            versendet, die bei der Registrierung angegeben wurde.
+          </p>
+          <p>
+            Die Verarbeitung der bei der Registrierung eingegebenen Daten
+            erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a
+            DSGVO). Ein Widerruf Ihrer bereits erteilten Einwilligung ist
+            jederzeit möglich. Für den Widerruf genügt eine formlose Mitteilung
+            per E-Mail. Die Rechtmäßigkeit der bereits erfolgten
+            Datenverarbeitung bleibt vom Widerruf unberührt.
+          </p>
+          <!--<p>Wir speichern die bei der Registrierung erfassten Daten während des Zeitraums, den Sie auf unserer Website registriert sind. Ihren Daten werden gelöscht, sollten Sie Ihre Registrierung aufheben. Gesetzliche Aufbewahrungsfristen bleiben unberührt.</p>-->
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div id="destroyed"></div>
+    <div id="destroyed"></div>
 
-  <script>
-    (function(){
-      function addFont() {
-        var style = document.createElement('style');
-        style.rel = 'stylesheet';
-        document.head.appendChild(style);
-        style.textContent = localStorage.sourceSansPro;
-      }
-
-      try {
-        if (localStorage.sourceSansPro) {
-          // The font is in localStorage, we can load it directly
-          addFont();
-        } else {
-          // We have to first load the font file asynchronously
-          var request = new XMLHttpRequest();
-          request.open('GET', 'styles/fonts.css', true);
-
-          request.onload = function() {
-            if (request.status >= 200 && request.status < 400) {
-              // We save the file in localStorage
-              localStorage.sourceSansPro = request.responseText;
-
-              // ... and load the font
-              addFont();
-            }
-          }
-
-          request.send();
+    <script>
+      (function () {
+        function addFont() {
+          var style = document.createElement("style");
+          style.rel = "stylesheet";
+          document.head.appendChild(style);
+          style.textContent = localStorage.sourceSansPro;
         }
-      } catch(ex) {
-        // maybe load the font synchronously for woff-capable browsers
-        // to avoid blinking on every request when localStorage is not available
-      }
-    }());
-  </script>
 
-  <script defer src="scripts/vendor/jquery.min.js"></script>
-  <script defer src="http://cdn.jsdelivr.net/g/jquery.pickadate.js@3.5.6(picker.js+picker.date.js)"></script>
+        try {
+          if (localStorage.sourceSansPro) {
+            // The font is in localStorage, we can load it directly
+            addFont();
+          } else {
+            // We have to first load the font file asynchronously
+            var request = new XMLHttpRequest();
+            request.open("GET", "styles/fonts.css", true);
 
-  <script>
-    /*!
+            request.onload = function () {
+              if (request.status >= 200 && request.status < 400) {
+                // We save the file in localStorage
+                localStorage.sourceSansPro = request.responseText;
+
+                // ... and load the font
+                addFont();
+              }
+            };
+
+            request.send();
+          }
+        } catch (ex) {
+          // maybe load the font synchronously for woff-capable browsers
+          // to avoid blinking on every request when localStorage is not available
+        }
+      })();
+    </script>
+
+    <script defer src="scripts/vendor/jquery.min.js"></script>
+    <script
+      defer
+      src="http://cdn.jsdelivr.net/g/jquery.pickadate.js@3.5.6(picker.js+picker.date.js)"
+    ></script>
+
+    <script>
+      /*!
      loadCSS: load a CSS file asynchronously.
      [c]2014 @scottjehl, Filament Group, Inc.
      Licensed MIT
      */
-    function loadCSS( href, before, media ){
-      "use strict";
-      var ss = window.document.createElement( "link" );
-      var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
-      var sheets = window.document.styleSheets;
-      ss.rel = "stylesheet";
-      ss.href = href;
-      ss.media = "only x";
-      ref.parentNode.insertBefore( ss, ref );
-      function toggleMedia(){
-        var defined;
-        for( var i = 0; i < sheets.length; i++ ){
-          if( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ){
-            defined = true;
+      function loadCSS(href, before, media) {
+        "use strict";
+        var ss = window.document.createElement("link");
+        var ref = before || window.document.getElementsByTagName("script")[0];
+        var sheets = window.document.styleSheets;
+        ss.rel = "stylesheet";
+        ss.href = href;
+        ss.media = "only x";
+        ref.parentNode.insertBefore(ss, ref);
+        function toggleMedia() {
+          var defined;
+          for (var i = 0; i < sheets.length; i++) {
+            if (sheets[i].href && sheets[i].href.indexOf(href) > -1) {
+              defined = true;
+            }
+          }
+          if (defined) {
+            ss.media = media || "all";
+          } else {
+            setTimeout(toggleMedia);
           }
         }
-        if( defined ){
-          ss.media = media || "all";
-        }
-        else {
-          setTimeout( toggleMedia );
-        }
+        toggleMedia();
+        return ss;
       }
-      toggleMedia();
-      return ss;
-    }
-  </script>
+    </script>
 
-  <!-- build:js(app/) scripts/main.min.js -->
-  <script defer src="scripts/vendor/what-input.min.js"></script>
-  <script defer src="scripts/vendor/jquery.lazy.min.js"></script>
-  <script defer src="scripts/vendor/foundation.js"></script>
+    <!-- build:js(app/) scripts/main.min.js -->
+    <script defer src="scripts/vendor/what-input.min.js"></script>
+    <script defer src="scripts/vendor/foundation.js"></script>
 
-  <script defer src="scripts/app.js"></script>
-  <!-- endbuild -->
+    <script defer src="scripts/app.js"></script>
+    <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-73166016-1', 'auto');
-      ga('require', 'linkid');
-      ga('send', 'pageview');
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-73166016-1", "auto");
+      ga("require", "linkid");
+      ga("send", "pageview");
     </script>
     <!-- Built with love using Web Starter Kit -->
-  <!-- Hotjar Tracking Code for http://kleine-villa-zimmert.de -->
-  <script>
-    (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:168561,hjsv:5};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
+    <!-- Hotjar Tracking Code for http://kleine-villa-zimmert.de -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 168561, hjsv: 5 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "//static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
   </body>
 </html>
