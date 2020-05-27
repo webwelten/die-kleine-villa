@@ -100,27 +100,19 @@ const BOOKING_GENERAL = 1,
       BOOKING_NOTES = 3;
 var curStep = BOOKING_GENERAL;
 
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
 /**
  * handleFormSubmit
  */
 function handleFormSubmit(event) {
 
   event.preventDefault();
-/*
-  if (curStep === BOOKING_GENERAL) {
-    document.querySelector('#general').classList.add('hide');
-    document.querySelector('#extras').classList.remove('hide');
-    curStep++;
-    return false;
-  }
 
-  if (curStep === BOOKING_EXTRAS) {
-    document.querySelector('#extras').classList.add('hide');
-    document.querySelector('#anmerkungen').classList.remove('hide');
-    curStep++;
-    return false;
-  }
-*/
   var requestArgs = {};
   var formEntries = $(this).serializeArray();
 
@@ -133,10 +125,21 @@ function handleFormSubmit(event) {
   requestArgs['dateCheckin'] = dateCheckin.getMilliseconds();
   requestArgs['dateCheckout'] = dateCheckout.getMilliseconds();
 
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: encode(requestArgs)
+  })
+    .then(() => showBookingResult())
+    .catch(error => alert(error));
+
+
+/*
   // send form data
   $.ajax({
       method: 'POST',
-      url: '/api/',
+      url: 'https:/kleine-villa-zimmert.de/api/',
       accepts: 'application/json',
       headers: {
           'Accept': 'application/json'
@@ -155,6 +158,7 @@ function handleFormSubmit(event) {
   }).fail(function(xhr, status, error) {
       console.log(error);
   });
+  */
 
   //ga('send', 'event', 'booking', 'request');
 

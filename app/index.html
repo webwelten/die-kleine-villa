@@ -1,8 +1,3 @@
-<?php
-  session_start();
-  $token = md5(rand(22,9999));
-  $_SESSION['token'] = $token;
-?>
 <!doctype html>
 <html lang="de" class="no-js">
   <head>
@@ -22,7 +17,8 @@
 
     <link inline href="styles/foundation.min.css" rel="stylesheet" type="text/css"/>
     <link inline href="styles/styles.css" rel="stylesheet" type="text/css"/>
-
+    <link inline href="styles/fonts.css" rel="stylesheet" type="text/css"/>
+    
     <link rel="stylesheet" href="https://unpkg.com/flatpickr@4.5.1/dist/flatpickr.min.css" media="print" onload="this.media='all'; this.onload=null;">
     <noscript><link rel="stylesheet" href="https://unpkg.com/flatpickr@4.5.1/dist/flatpickr.min.css"></noscript>
 
@@ -255,8 +251,8 @@
                 <div class="row align-center">
                   <div class="columns">
 
-                    <form id="booking-form" data-abide novalidate>
-                      <input type="hidden" name="token" value="<?php echo $token; ?>" />
+                    <form id="booking-form" netlify data-abide novalidate>
+                      <input type="hidden" name="form-name" value="booking-request" />
 
                       <div class="booking-step">
 
@@ -695,49 +691,15 @@
   </section>
 
   <div class="text-center legal" style="padding: 5px;">
-    <a href="datenschutz.html">Impressum</a> &ndash; <a href="datenschutz.html">Datenschutz</a> &ndash; <a href="https://www.ferienhausmarkt.com/region/schleswig-holstein/">Ferienhausmarkt</a>
+    <!-- <a href="datenschutz.html">Impressum</a> &ndash; <a href="datenschutz.html">Datenschutz</a> &ndash; <a href="https://www.ferienhausmarkt.com/region/schleswig-holstein/">Ferienhausmarkt</a> -->
   </div>
 
   <div id="destroyed" style="padding: 0;"></div>
 
-  <script>
-    (function(){
-      function addFont() {
-        var style = document.createElement('style');
-        style.rel = 'stylesheet';
-        document.head.appendChild(style);
-        style.textContent = localStorage.sourceSansPro;
-      }
-
-      try {
-        if (localStorage.sourceSansPro) {
-          // The font is in localStorage, we can load it directly
-          addFont();
-        } else {
-          // We have to first load the font file asynchronously
-          var request = new XMLHttpRequest();
-          request.open('GET', 'styles/fonts.css', true);
-
-          request.onload = function() {
-            if (request.status >= 200 && request.status < 400) {
-              // We save the file in localStorage
-              localStorage.sourceSansPro = request.responseText;
-
-              // ... and load the font
-              addFont();
-            }
-          }
-
-          request.send();
-        }
-      } catch(ex) {
-        // maybe load the font synchronously for woff-capable browsers
-        // to avoid blinking on every request when localStorage is not available
-      }
-    }());
-  </script>
-
-  <script src="scripts/vendor/jquery.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
 
   <script src="https://unpkg.com/flatpickr@4.5.1/dist/flatpickr.min.js"></script>
   <script src="https://unpkg.com/flatpickr@4.5.1/dist/plugins/rangePlugin.js"></script>
