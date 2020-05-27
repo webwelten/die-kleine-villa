@@ -121,10 +121,10 @@ function handleFormSubmit(event) {
           requestArgs[entry.name.toLowerCase()] = entry.value;
       }
   });
-
+/*
   requestArgs['dateCheckin'] = dateCheckin.getMilliseconds();
   requestArgs['dateCheckout'] = dateCheckout.getMilliseconds();
-
+*/
 
   fetch("/", {
     method: "POST",
@@ -134,6 +134,7 @@ function handleFormSubmit(event) {
     .then(() => showBookingResult())
     .catch(error => alert(error));
 
+    event.preventDefault();
 
 /*
   // send form data

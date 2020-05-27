@@ -251,8 +251,7 @@
                 <div class="row align-center">
                   <div class="columns">
 
-                    <form id="booking-form" netlify data-abide novalidate>
-                      <input type="hidden" name="form-name" value="booking-request" />
+                    <form action="/" id="booking-form" name="booking-form" netlify data-abide novalidate>
 
                       <div class="booking-step">
 
@@ -266,7 +265,7 @@
 
                                 <label>Anreise &amp; Abreise<sup>*</sup>
                                   <input id="date-checkin"
-                                    name="dateCheckin"
+                                    name="datecheckin"
                                     class="datepicker"
                                     type="text"
                                     placeholder="Im Kalender ausw&auml;hlen"
@@ -296,7 +295,7 @@
 
                               <div class="small-6 columns">
                                 <label>Vollständiger Name<sup>*</sup>
-                                  <input type="text" name="fullName" placeholder="Name" required>
+                                  <input type="text" name="fullname" placeholder="Name" required>
                                   <span class="form-error">
                                     Bitte Vor- und Nachnamen eingeben
                                   </span>
