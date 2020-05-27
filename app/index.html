@@ -17,7 +17,8 @@
 
     <link inline href="styles/foundation.min.css" rel="stylesheet" type="text/css"/>
     <link inline href="styles/styles.css" rel="stylesheet" type="text/css"/>
-
+    <link inline href="styles/fonts.css" rel="stylesheet" type="text/css"/>
+    
     <link rel="stylesheet" href="https://unpkg.com/flatpickr@4.5.1/dist/flatpickr.min.css" media="print" onload="this.media='all'; this.onload=null;">
     <noscript><link rel="stylesheet" href="https://unpkg.com/flatpickr@4.5.1/dist/flatpickr.min.css"></noscript>
 
@@ -694,43 +695,6 @@
   </div>
 
   <div id="destroyed" style="padding: 0;"></div>
-
-  <script>
-    (function(){
-      function addFont() {
-        var style = document.createElement('style');
-        style.rel = 'stylesheet';
-        document.head.appendChild(style);
-        style.textContent = localStorage.sourceSansPro;
-      }
-
-      try {
-        if (localStorage.sourceSansPro) {
-          // The font is in localStorage, we can load it directly
-          addFont();
-        } else {
-          // We have to first load the font file asynchronously
-          var request = new XMLHttpRequest();
-          request.open('GET', 'styles/fonts.css', true);
-
-          request.onload = function() {
-            if (request.status >= 200 && request.status < 400) {
-              // We save the file in localStorage
-              localStorage.sourceSansPro = request.responseText;
-
-              // ... and load the font
-              addFont();
-            }
-          }
-
-          request.send();
-        }
-      } catch(ex) {
-        // maybe load the font synchronously for woff-capable browsers
-        // to avoid blinking on every request when localStorage is not available
-      }
-    }());
-  </script>
 
 <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
