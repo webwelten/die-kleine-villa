@@ -1,6 +1,9 @@
 {
   "devDependencies": {
-    "eslint-config-google": "^0.3.0"
+    "eslint-config-google": "^0.3.0",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-purgecss": "^2.1.3"
+
   },
   "engines": {
     "node": ">=0.12"
@@ -16,9 +19,5 @@
   },
   "eslintConfig": {
     "extends": "google"
-  },
-  "dependencies": {
-    "jquery": "^3.5.1",
-    "parcel": "next"
   }
 }
